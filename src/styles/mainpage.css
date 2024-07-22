@@ -52,11 +52,12 @@
     display: grid;
     margin-top: -80px;
     grid-template-columns: repeat(3,1fr);
+    max-height: 300px;
 }
 
 .little-images img{
     width: 100%;
-    max-height: 300px;
+    height: 300px;
     object-fit: cover;
 }
 

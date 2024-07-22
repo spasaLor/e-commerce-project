@@ -1,10 +1,11 @@
 import '../styles/mainpage.css';
+import image5 from "../assets/5.jpg";
 
 export default function Young(){
     return(
         <div className="banner">
             <div className="img">
-                <img src="src/assets/5.jpg" alt="" />
+                <img src={image5} alt="" />
             </div>
             <div className="text">
                 <h2>Young & Crazy</h2>

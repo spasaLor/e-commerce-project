@@ -4,6 +4,10 @@ import { useState,useEffect } from "react";
 import Young from "./Young";
 import Onsale from "./Onsale";
 import { useOutletContext } from "react-router-dom";
+import image1 from "../assets/1.jpg";
+import image2 from "../assets/2.jpg";
+import image3 from "../assets/3.jpg";
+import image4 from "../assets/4.jpg";
 
 export default function Mainpage(){
     const[loading,setLoading]=useState(true);
@@ -47,7 +51,7 @@ export default function Mainpage(){
             <div className="main-container">
                 <div className="hero">
                     <div className="top">
-                    <img src="src\assets\1.jpg" alt="" />
+                    <img src={image1} alt="" />
                         <div className="text">
                             <h2>Summer get away holiday sales</h2>
                             <p>Fona has everything you need to start selling online</p>
@@ -55,7 +59,7 @@ export default function Mainpage(){
                         </div>
                     </div>                    
                     <div className="little-images">
-                        <img src="src/assets/2.jpg" alt="" /><img src="src/assets/2.webp" alt="" /><img src="src/assets/4.webp" alt="" />
+                        <img src={image2} alt="" /><img src={image3} alt="" /><img src={image4} alt="" />
                     </div>
                 </div>
                 <Newarrivals cart={cart} setCart={setCart} allData={allData} loading={loading}/>
