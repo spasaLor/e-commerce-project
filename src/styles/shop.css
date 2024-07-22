@@ -1,0 +1,44 @@
+.shop-page{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100%;
+    padding: 0px 20px;
+    margin-top: 20px;
+}
+.side-bar h2{
+    padding:10px 0px;
+    font-family: 'Poppins';
+}
+.side-bar{
+    background-color: rgb(150, 178, 188);
+    padding-left: 10px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    
+}
+
+.side-bar .categories-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+}
+.main-content .inner-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap:10px;
+    background-color: rgb(150, 178, 188);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.inner-container .item{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+}
+.inner-container .item img{
+    max-width: 80%;
+    object-fit: contain;
+}

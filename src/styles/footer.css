@@ -1,0 +1,51 @@
+footer{
+    background-color: rgb(208, 201, 201);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    margin-top: 150px;
+    height: 45vh;
+    padding:20px 30px;
+    box-sizing: border-box;
+    align-content: center;
+    justify-items: center;
+}
+footer h2{
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+footer .about, footer .information, footer .care, footer .newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap:30px;
+    align-self: start;
+}
+
+.information p, .care p{
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+.about .more-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info svg{
+    margin-right: 5px;
+}
+
+.more-info .info svg{
+   position: relative;
+   top:3px;
+}
+
+.newsletter input{
+    padding: 5px 6px;
+    border-radius: 10px;
+    border: 1px solid gray;
+ }

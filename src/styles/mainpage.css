@@ -1,0 +1,93 @@
+.main-container{
+    margin-bottom: 20px;
+}
+.hero{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    width: 100%;
+    min-height: 700px;
+    top:-80px;
+    position: relative;
+    overflow: hidden;
+}
+.top img{
+    object-fit: cover;
+    width:100%;
+    height: 130%;
+    position: absolute;
+    left:0;
+}
+.top .text, .banner .text{
+    position: absolute;
+    top:45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:15px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+.top .text h2, .banner .text h2{
+    text-transform: capitalize;
+    font-size: 1.4em;
+}
+
+.top .text button, .banner .text button{
+    width: 150px;
+    align-self: center;
+    padding: 10px 0px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(8, 8, 8);
+    cursor: pointer;
+}
+
+.little-images{
+    display: grid;
+    margin-top: -80px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.little-images img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.banner{
+    margin-top: 30px;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+
+.banner .img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .text{
+    color: rgb(0, 0, 0);
+}
+
+.banner .text h2{
+    font-size: 1.7em;
+}
+
+.banner .text button{
+    color:black;
+}

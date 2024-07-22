@@ -1,0 +1,117 @@
+.cart-container{
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-part{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1.75fr 1fr 1fr;
+    justify-items: center;
+    padding: 30px 0px;
+    border-bottom:1px solid gray ;
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.cart-item{
+    max-height: 100px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1.75fr 1fr 1fr;
+    border-bottom: 1px solid gray;
+    padding: 20px 0px;
+}
+
+.first, .second, .third, .fourth, .fifth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
+}
+
+.first{
+    gap:30px;
+    justify-content: flex-start;
+}
+
+.first .text{
+    flex-grow: 1;
+}
+
+.first .text p{
+    font-size: 0.8em;
+}
+
+.cart-item .first img{
+    height: 100%;
+}
+
+.second input, .third input{
+    height: 40px;
+    width: 40px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.third button, .fourth button{
+    height: 45px;
+    width: 45px;
+    font-size: 2em;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.third button:first-child{
+    background-color:cyan;
+    color: black;
+}
+
+.fourth button{
+    font-size: 1.5em;
+}
+
+.fifth{
+    font-weight: bold;
+}
+
+.bottom-boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.bottom-boxes .discount, .bottom-boxes .delivery, .bottom-boxes .subtotal, .bottom-boxes .total{
+    border: 1px solid gray;
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+}
+
+.last-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.last-row .left{
+    width:70vw;
+    flex-grow: 1;
+}
+.left input{
+    width: 60%;
+    padding: 10px 0px;
+    padding-left: 10px;
+    border: 1px solid gray;
+}
+.last-row button{
+    font-family: 'Poppins';
+    padding: 8px 0px;
+    width: 20%;
+    background-color: cyan;
+    border: 1px solid gray;
+    font-weight: 600;
+}

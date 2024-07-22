@@ -1,0 +1,18 @@
+.not-found{
+    width: 100vw;
+    height: 100vh;
+}
+.not-found .text{
+    height: 100%;
+    background-color: cyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    font-weight: bold;
+}
+.not-found .text h2{
+    font-size: 5em;
+    color: rgb(243, 9, 247);
+}
