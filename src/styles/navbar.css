@@ -21,7 +21,10 @@
     justify-content: center;
     align-items: center;    
     background-color: #242424;
+}
+.logo-shop a{
     color:  rgb(240, 239, 239);
+
 }
 .navbar .right{
     display: flex;

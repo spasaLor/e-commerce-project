@@ -1,16 +1,18 @@
 import Navbar from "./Navbar";
 import "../styles/landing.css";
+import "../App.css";
+import Footer from "./Footer";
 
 export default function Landing(){
     return(
         <div className='container'>
             <Navbar/>
-            <div className="hero">
+            <section className="hero">
                 <h1>Hazy shade of spring</h1>
                 <i className="latin">Quisque lorem tortor frigilla sed, vestibulum id, elifend justo.</i>
                 <button type="button">Check new arrivals</button>
-            </div>
-            <div className="grid-section">
+            </section>
+            <section className="grid-section">
                 <div id="grid-item1">
                     <h2>heather grey basics</h2>
                     <p>new arrival</p>
@@ -45,7 +47,17 @@ export default function Landing(){
                     <h2>basic blazer</h2>
                     <p>from €199.00</p>
                 </div>
-            </div>
-            </div>
+            </section>
+            <section className="newsletter">
+                <div className="text">
+                    <h2>sign up to receive our updates</h2>
+                    <i>Nulla ipsum dolor iacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.</i>
+                </div>
+                <div className="inputs">
+                    <input type="email" placeholder="Your e-mail"/><button type="button">add</button>
+                </div>
+            </section>
+            <Footer/>
+        </div>
     );
 }

@@ -1,0 +1,28 @@
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#collection, #site, #shop, #social{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:3px;
+    padding-left: 20px;
+}
+
+#site, #shop, #social{
+    border-left: 1px solid rgba(0, 0, 0, 0.252);
+    padding-bottom: 20px;
+}
+
+.footer-container h3{
+    border: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.footer-container p{
+    margin: 0;
+    padding: 0;
+}

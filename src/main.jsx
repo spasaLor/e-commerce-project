@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Landing from './components/Landing.jsx'
+import Catalogue from './components/Catalogue.jsx'
 
 const routes = createBrowserRouter([{
   path:"/",
@@ -11,7 +11,7 @@ const routes = createBrowserRouter([{
 },
 {
   path:"/catalogue/:section",
-  //element : <Catalog/> (woman men kids)
+  element : <Catalogue/> 
 },
 {
   path:"/about",

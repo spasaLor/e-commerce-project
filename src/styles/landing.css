@@ -100,3 +100,34 @@
 #grid-item10{
     background-color: rgb(186, 185, 185);
 }
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:100px 0px;
+    gap:40px;
+}
+.newsletter h2{
+    margin: 0;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.newsletter .inputs input{
+    width: 30%;
+    padding: 15px 5px;
+    background-color:  rgb(240, 239, 239);
+    border: 1px solid #242424;
+    border-right: none;
+    color: #242424;
+
+}
+.newsletter .inputs button{
+    padding: 15px 25px;
+    background-color:#e68607;
+    border: 1px solid #242424;
+    border-left:none;
+}

@@ -8,10 +8,12 @@ export default function Navbar(){
     return(
             <nav className="navbar">
             <div className="left">
-                <div className="logo-shop">SH</div>
+                <div className="logo-shop">
+                    <Link to={"/"}>SH</Link>
+                </div>
                 <Link to={"/catalogue/women"}>Women</Link>
                 <Link to={"/catalogue/men"}>Men</Link>
-                <Link to={"/catalogue/kids"}>Kids</Link>
+                <Link to={"/catalogue/electronics"}>Electronics</Link>
                 <p>Coming soon</p>
                 <Link to={"/about"}>About</Link>
             </div>   
