@@ -23,13 +23,13 @@
     flex-direction: column;
 }
 
-.main-cart .top-row, .main-cart .cart-item{
+.main-cart .top-row{
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
 }
 
-.main-cart .top-row .left, .main-cart .top-row .right, .cart-item .right{
+.main-cart .top-row .left, .main-cart .top-row .right{
     display: flex;
     gap:6vw;
     align-items: center;
@@ -55,7 +55,8 @@
 
 .right .quantity{
     display: flex;
-    gap: 5px;
+    gap: 3px;
+    align-items: center;
 }
 
 .quantity input{
@@ -71,19 +72,112 @@
     display: flex;
     gap:5px;
     flex-direction: column;
-    align-items: center;
 }
 
 .qty-controls *{
     background-color: black;
     color: white;
-    width: 7px;
-    padding: 3px;
-    height: 5px;
-}
-.cart-item .left, .cart-item .right{
+    width: 10px;
+    height: 10px;
     display: flex;
     align-items: center;
-    text-transform: capitalize;
-    gap:6vw;
+    justify-content: center;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item .left{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.cart-item .right{
+    display: flex;
+    align-items: center;
+    width: 46%;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+.bottom{
+    text-align: right;
+    padding-right: 7vw;
+}
+
+.bottom .tot{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    gap:5px;
+    font-weight: 600;
+}
+.tot p:nth-child(2){
+    color: orange;
+}
+
+.form-container{
+    max-width: 35%;
+    margin: 0 auto;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 20px;
+    gap:5px;
+}
+
+.form-item input, .form-item select{
+    color: #242424;
+    background-color:  rgb(240, 239, 239);
+    border: 1px solid #909090;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.form-item .first, .form-item .last{
+    display: flex;
+    flex-direction: column;
+} 
+
+.form-container .form-item:nth-child(2), .form-container .form-item:nth-child(5){
+    flex-direction: row;
+    gap:20px;
+}
+
+.form-container .form-item:last-child{
+    flex-direction: row;
+    justify-content: center;
+    text-transform: none;
+}
+
+.form-item .bottom{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap:20px;
+}
+
+#payment{
+    max-width: 35%;
+    margin: 10vh auto;
+}
+
+#payment button{
+    width: 40%;
+    height: 40px;
+    margin: 0px auto;
+    background-color: orange;
+    text-transform: uppercase;
+    color: white;
+    border: none;
 }
