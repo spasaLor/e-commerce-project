@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { useOutletContext, useParams } from "react-router-dom";
 import "../styles/catalogue.css";
 import CatalogueItem from "./CatalogueItem";
 
@@ -9,9 +7,10 @@ export default function Catalogue(){
     const params = useParams();
     const [items, setItems] = useState([]); 
     const [error, setError] = useState(null);
-    let url ='https://fakestoreapi.com/products/category/';
+    const {cart,addToCart} = useOutletContext();
     
     useEffect(()=>{
+        let url ='https://fakestoreapi.com/products/category/';
         params.section === 'men' ? url+= "men's clothing" : params.section === 'women' ? url+="women's clothing" : url+='electronics';
         fetch(url).then(response => {
             if (response.status >= 400)
@@ -25,11 +24,8 @@ export default function Catalogue(){
 
     if(error)
         return <p>An error was encountered: {error}</p>
-
-    console.log(params.section);
     return(
-        <div className="container">
-            <Navbar/>
+        <>
             <div className="mid">
                 <p>home / {params.section}</p>
                 <div className="main">
@@ -39,10 +35,10 @@ export default function Catalogue(){
             </div>
             <div className="item-container">
                 {items.map(item=>(
-                    <CatalogueItem item={item} key={item.id}/>
+                    <CatalogueItem item={item} key={item.id} itemClicked={addToCart} cart={cart}/>
                 ))}
             </div>
-            <Footer/>
-        </div>        
+        </>
+            
     );
 }

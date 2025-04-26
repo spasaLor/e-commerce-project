@@ -38,13 +38,13 @@
 
 .img-div {
     width: 100%;
-    height: 400px; /* Adjust as needed */
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 1px solid #242424;;
+    border: 1px solid #242424;
     padding: 10px;
     box-sizing: border-box;
     position: relative;
