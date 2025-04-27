@@ -1,0 +1,24 @@
+.main h2{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.main i{
+    font-size: 1.2rem;
+    color: #6e6d6d;
+}
+
+.bottom{
+    display: flex;
+    text-align: left;
+    margin-top: 50vh;
+    margin-bottom: 20vh;
+    gap:100px;
+}
+
+.bottom h3{
+    text-transform: uppercase;
+}

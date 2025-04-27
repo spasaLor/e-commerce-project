@@ -9,7 +9,7 @@ export default function Navbar({cart}){
             <nav className="navbar">
             <div className="left">
                 <div className="logo-shop">
-                    <Link to={"/home"}>SH</Link>
+                    <Link to={"/"}>SH</Link>
                 </div>
                 <Link to={"/catalogue/women"}>Women</Link>
                 <Link to={"/catalogue/men"}>Men</Link>

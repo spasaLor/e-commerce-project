@@ -1,5 +1,6 @@
 import "../styles/landing.css";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 export default function Landing(){
     return(
@@ -7,7 +8,7 @@ export default function Landing(){
         <section className="hero">
             <h1>Hazy shade of spring</h1>
             <i className="latin">Quisque lorem tortor frigilla sed, vestibulum id, elifend justo.</i>
-            <button type="button">Check new arrivals</button>
+            <button type="button"><Link to={"/catalogue/men"}>Check new Arrivals</Link></button>
         </section>
         <section className="grid-section">
             <div id="grid-item1">

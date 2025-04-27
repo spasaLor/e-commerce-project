@@ -9,7 +9,7 @@ export default function Footer(){
                     <h3>collection</h3>
                     <Link to={"/catalogue/women"}>Women</Link>
                     <Link to={"/catalogue/men"}>Men</Link>
-                    <Link to={"/catalogue/kids"}>Kids</Link>
+                    <Link to={"/catalogue/electronics"}>Electronics</Link>
                     <p>Coming Soon</p>
                 </div>
                 <div id="site">

@@ -6,16 +6,12 @@ import Landing from './components/Landing.jsx'
 import Catalogue from './components/Catalogue.jsx'
 import App from './App.jsx'
 import Cart from './components/Cart.jsx'
+import About from './components/About.jsx'
 
 const routes = createBrowserRouter([{
   path:"/",
   element: <App/>,
-  children:[{path:"/home", element:<Landing/>},{path:"/catalogue/:section",element : <Catalogue/>},{path:"/basket", element: <Cart/>}]
-},
-
-{
-  path:"/about",
-  //element:about
+  children:[{path:"/", element:<Landing/>},{path:"/catalogue/:section",element : <Catalogue/>},{path:"/basket", element: <Cart/>}, { path:"/about",element:<About/>},]
 },
 ])
 

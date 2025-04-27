@@ -103,7 +103,7 @@
 .newsletter{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
     margin:100px 0px;
     gap:40px;
 }
@@ -117,7 +117,7 @@
 }
 
 .newsletter .inputs input{
-    width: 30%;
+    width: 30vw;
     padding: 15px 5px;
     background-color:  rgb(240, 239, 239);
     border: 1px solid #242424;
@@ -130,4 +130,19 @@
     background-color:#e68607;
     border: 1px solid #242424;
     border-left:none;
+}
+
+@media (max-width: 1000px) {
+    #grid-item6, #grid-item2{
+        padding: 0px 10px;
+    }
+}
+
+@media (max-width:870px) {
+    .grid-section{
+        height: 680px;
+    }
+    #grid-item2{
+        padding: 0px;
+    }
 }

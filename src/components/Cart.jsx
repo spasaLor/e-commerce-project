@@ -130,7 +130,7 @@ function Shipping({total}){
             </div>
             <div className="form-item" id="payment">
                 <label htmlFor="card">select payment method</label>
-                <div className="bottom">
+                <div className="card-container">
                     <select name="card" value={selectedCard} onChange={(e)=>setSelectedCard(e.target.value)}>
                         <option value="visa">Visa</option>
                         <option value="master">Mastercard</option>
@@ -173,9 +173,12 @@ export default function Cart(){
                         <p>amout</p>
                         <p>delete</p>
                     </div>
-                    
                 </div>
-                {cart.map((item,i) =>(
+                {cart.length === 0 ? 
+                <div className="empty-cart">
+                    <h2>The cart is currently empty</h2>
+                </div>
+                : cart.map((item,i) =>(
                     <CartItem item={item} deleteClick={()=>deleteItem(item)} key={item.id} setTot={setSubtotals} index={i} />
                 ))}
                 <div className="bottom">

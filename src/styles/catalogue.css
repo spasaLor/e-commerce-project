@@ -7,13 +7,11 @@
 .mid p, .mid h2{
     margin:0;
     padding:0;
-}
-.mid h2{
     text-transform: uppercase;
 }
+
 .mid p{
     align-self: flex-start;
-    text-transform: uppercase;
     word-spacing: 2px;
 }
 .mid .main{
