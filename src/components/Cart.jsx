@@ -7,9 +7,10 @@ function CartItem({item, deleteClick, setTot,index}){
 
     useEffect(()=>{
         let subtotal = item.price * qty;
+        const rounded = Math.round(subtotal * 100) / 100;
         setTot(prev => {
             const updated = [...prev];
-            updated[index]=subtotal;
+            updated[index]=rounded;
             return updated;
         });
     },[qty]);
@@ -25,27 +26,23 @@ function CartItem({item, deleteClick, setTot,index}){
 
     return(
         <div className="cart-item">
-            <div className="left">
-                <div className="img">
-                    <img src={item.image} alt={item.title} />
-                </div>
-                <div className="desc">
-                    <b>{item.title}</b>
+            <div className="img">
+                <img src={item.image} alt={item.title} />
+            </div>
+            <div className="desc">
+                <b style={{overflow: "hidden",textOverflow: "ellipsis", whiteSpace: "nowrap", display:"inline-block"}} title={item.title}>{item.title}</b>
+            </div>
+            <p>{item.category}</p>
+            <p>{item.id}</p>
+            <div className="quantity">
+                <input type="num" min={1} max={5} value={qty} onChange={(e)=>setQty(e.target.value)}/>
+                <div className="qty-controls">
+                    <div onClick={()=>setQty(prev=> prev <5 ? prev+1 : prev)}> <p>+</p></div> 
+                    <div onClick={()=>setQty(prev=> prev === 1 ? prev : prev-1)}> <p>-</p> </div>
                 </div>
             </div>
-            <div className="right">
-                <p>{item.category}</p>
-                <p>{item.id}</p>
-                <div className="quantity">
-                    <input type="num" min={1} max={5} value={qty} onChange={(e)=>setQty(e.target.value)}/>
-                    <div className="qty-controls">
-                        <div onClick={()=>setQty(prev=> prev <5 ? prev+1 : prev)}> <p>+</p></div> 
-                        <div onClick={()=>setQty(prev=> prev === 1 ? prev : prev-1)}> <p>-</p> </div>
-                    </div>
-                </div>
-                <p>€{item.price}</p>
-                <p onClick={onDelete} style={{cursor:'pointer'}}>X</p>
-            </div>
+            <p>€{item.price}</p>
+            <p onClick={onDelete} style={{cursor:'pointer'}}>X</p>
         </div>
     );
 }
@@ -162,17 +159,13 @@ export default function Cart(){
             </div>
             <div className="main-cart">
                 <div className="top-row">
-                    <div className="left">
                         <p>product</p>
                         <p>description</p>
-                    </div>
-                    <div className="right">
                         <p>category</p>
                         <p>id</p>
                         <p>qty</p>
                         <p>amout</p>
                         <p>delete</p>
-                    </div>
                 </div>
                 {cart.length === 0 ? 
                 <div className="empty-cart">
