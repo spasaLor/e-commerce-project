@@ -84,3 +84,26 @@
  .img-div:hover .overlay{
     height: 10%;
 }
+
+@media (max-width:775px) {
+    .mid p{
+        align-self: center;
+    }
+    .mid{
+        padding: 1em 0;
+    }
+}   
+
+@media (max-width:500px) {
+    .item-container{
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        gap:20px;
+    }
+    .item{
+        height: unset;
+        width: unset;
+    }
+    .item .img-div{
+        height: 250px;
+    }
+}

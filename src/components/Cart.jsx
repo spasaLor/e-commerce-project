@@ -30,7 +30,7 @@ function CartItem({item, deleteClick, setTot,index}){
                 <img src={item.image} alt={item.title} />
             </div>
             <div className="desc">
-                <b style={{overflow: "hidden",textOverflow: "ellipsis", whiteSpace: "nowrap", display:"inline-block"}} title={item.title}>{item.title}</b>
+                <b title={item.title}>{item.title}</b>
             </div>
             <p>{item.category}</p>
             <p>{item.id}</p>
@@ -41,7 +41,7 @@ function CartItem({item, deleteClick, setTot,index}){
                     <div onClick={()=>setQty(prev=> prev === 1 ? prev : prev-1)}> <p>-</p> </div>
                 </div>
             </div>
-            <p>€{item.price}</p>
+            <b>€{item.price}</b>
             <p onClick={onDelete} style={{cursor:'pointer'}}>X</p>
         </div>
     );
@@ -60,7 +60,7 @@ function Shipping({total}){
                 <i>All fields are required</i>
             </div>
             <div className="form-container">
-                <form action="">
+                <form>
                     <div className="form-item">
                         <label htmlFor="delivery">Select delivery method</label>
                         <select name="delivery" value={selectedShip} onChange={(e)=>{

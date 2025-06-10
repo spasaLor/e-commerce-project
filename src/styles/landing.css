@@ -117,15 +117,18 @@
     letter-spacing: 2px;
     font-weight: 500;
 }
-
+.newsletter .inputs{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
 .newsletter .inputs input{
-    width: 30vw;
     padding: 15px 5px;
     background-color:  rgb(240, 239, 239);
     border: 1px solid #242424;
     border-right: none;
     color: #242424;
-
+    flex: 1;
 }
 .newsletter .inputs button{
     padding: 15px 25px;
@@ -144,4 +147,54 @@
     #grid-item2{
         padding: 0px;
     }
+
+@media (max-width:560px) {
+    .hero{
+        padding:80px 0;
+    }
+    .grid-section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,200px);
+        width: 100%;
+    }
+    #grid-item1{
+        grid-row: 3;
+    }
+    #grid-item2{
+        display: none;
+    }
+    #grid-item3{
+        grid-row: 1;
+        grid-column: 1;
+        background-color: #606060;
+    }
+    #grid-item4{
+        grid-row: 4;
+        grid-column: 1;
+    }
+    #grid-item5{
+        grid-row: 5;
+        grid-column: 1;
+    }
+    #grid-item6{
+        grid-row: 6;
+        grid-column: 1;
+    }
+    #grid-item8,#grid-item9,#grid-item10{
+        display: none;
+    }
+    #grid-item7{
+        grid-row:2;
+        grid-column: 1;
+    }
+    .newsletter{
+        margin: 80px 0px;
+    }
+    .newsletter .text h2{
+        letter-spacing: unset;
+    }
+    .newsletter .inputs input{
+        width: 80%;
+    }
+}
 }
