@@ -50,6 +50,5 @@ export default function Navbar({cart}){
             </nav>
             <div className="modal" onClick={closeSidebar} ref={overRef}></div>
         </>
-        
     );
 }
